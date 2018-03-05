@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ScoreCounter</string>
+    <string name="Player1">Player 1</string>
+    <string name="Player2">Player 2</string>
+    <string name="zero">0</string>
+    <string name="resethole">Reset hole</string>
+    <string name="resetgame">Reset game</string>
+    <string name="addtototal">Add to total</string>
+    <string name="total">Total</string>
+    <string name="welcome">Welcome to the court!</string>
+    <string name="enterNames">Please enter your names</string>
+    <string name="fillFirst">Player 1</string>
+    <string name="fillSecond">Player 2</string>
+    <string name="play">Play</string>
+
+</resources>
