@@ -8,12 +8,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final String STATE_SCORE_1 = "pointsPlayer1";
-    static final String STATE_SCORE_2 = "pointsPlayer2";
-    static final String STATE_SCORE_3 = "totalPlayer1";
-    static final String STATE_SCORE_4 = "totalPlayer2";
-    static final String NAME_1 = "first";
-    static final String NAME_2 = "second";
+    static final String SCORE_ONE = "pointsPlayer1";
+    static final String SCORE_TWO = "pointsPlayer2";
+    static final String TOTAL_ONE = "totalPlayer1";
+    static final String TOTAL_TWO = "totalPlayer2";
+    static final String NAME_1 = "nameOne";
+    static final String NAME_2 = "nameTwo";
 
     int pointsPlayer1 = 0;
     int pointsPlayer2 = 0;
@@ -21,6 +21,21 @@ public class MainActivity extends AppCompatActivity {
     int totalPlayer2 = 0;
     String first;
     String second;
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_main);
+
+        savedInstanceState.putInt(SCORE_ONE, pointsPlayer1);
+        savedInstanceState.putInt(SCORE_TWO, pointsPlayer2);
+        savedInstanceState.putInt(TOTAL_ONE, totalPlayer1);
+        savedInstanceState.putInt(TOTAL_TWO, totalPlayer2);
+        savedInstanceState.putString(NAME_1, first);
+        savedInstanceState.putString(NAME_2, second);
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,42 +52,27 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = intent2.getExtras();
         first = bundle.getString("first_name");
         second = bundle.getString("second_name");
+
         displayPlayer1Name(first);
         displayPlayer2Name(second);
 
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_main);
-
-        savedInstanceState.putInt(STATE_SCORE_1, pointsPlayer1);
-        savedInstanceState.putInt(STATE_SCORE_2, pointsPlayer2);
-        savedInstanceState.putInt(STATE_SCORE_3, totalPlayer1);
-        savedInstanceState.putInt(STATE_SCORE_4, totalPlayer2);
-        savedInstanceState.putString(NAME_1, first);
-        savedInstanceState.putString(NAME_2, second);
-
-        super.onSaveInstanceState(savedInstanceState);
-    }
-
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-
-        pointsPlayer1 = savedInstanceState.getInt(STATE_SCORE_1);
-        pointsPlayer2 = savedInstanceState.getInt(STATE_SCORE_2);
-        totalPlayer1 = savedInstanceState.getInt(STATE_SCORE_3);
-        totalPlayer2 = savedInstanceState.getInt(STATE_SCORE_4);
-        first = savedInstanceState.getString(NAME_1);
-        second = savedInstanceState.getString(NAME_2);
-        displayForPlayer1(pointsPlayer1);
-        displayForPlayer2(pointsPlayer2);
-        displayTotalForPlayer1(totalPlayer1);
-        displayTotalForPlayer2(totalPlayer2);
-        displayPlayer1Name(first);
-        displayPlayer2Name(second);
+        if (savedInstanceState != null) {
+            pointsPlayer1 = savedInstanceState.getInt(SCORE_ONE);
+            pointsPlayer2 = savedInstanceState.getInt(SCORE_TWO);
+            totalPlayer1 = savedInstanceState.getInt(TOTAL_ONE);
+            totalPlayer2 = savedInstanceState.getInt(TOTAL_TWO);
+            first = savedInstanceState.getString(NAME_1);
+            second = savedInstanceState.getString(NAME_2);
+            displayForPlayer1(pointsPlayer1);
+            displayForPlayer2(pointsPlayer2);
+            displayTotalForPlayer1(totalPlayer1);
+            displayTotalForPlayer2(totalPlayer2);
+            displayPlayer1Name(first);
+            displayPlayer2Name(second);
+        }
 
     }
+
 
     public void displayPlayer1Name (String first){
         TextView newNameOne = (TextView) findViewById(R.id.playerOne);

@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.scorecounter.MainActivity"
-    android:background= "@drawable/green"
-    android:orientation="vertical">
+    android:background="@drawable/green"
+    android:orientation="vertical"
+    tools:context="com.example.android.scorecounter.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -24,37 +24,33 @@
 
             <TextView
                 android:id="@+id/playerOne"
+                style="@style/TextMain"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="20dp"
+                android:paddingTop="@dimen/marginM"
                 android:text="@string/Player1"
                 android:textAllCaps="true"
-                android:textColor="@color/mygrey"
                 android:textSize="@dimen/textSmall" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/imageButton"
+                android:layout_height="@dimen/imageButton"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginBottom="@dimen/marginM"
+                android:layout_marginTop="@dimen/marginL"
                 android:onClick="strikeFor1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ball" />
 
             <TextView
                 android:id="@+id/player_1_score"
+                style="@style/TextMain"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="@dimen/marginM"
                 android:text="@string/zero"
-                android:textColor="@color/mygrey"
                 android:textSize="@dimen/textBig" />
 
             <Button
-                android:layout_width="125dp"
+                android:layout_width="@dimen/buttonW"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="addTo1"
@@ -62,7 +58,7 @@
 
 
             <Button
-                android:layout_width="125dp"
+                android:layout_width="@dimen/buttonW"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="reset1"
@@ -78,44 +74,40 @@
 
             <TextView
                 android:id="@+id/playerTwo"
+                style="@style/TextMain"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="20dp"
+                android:paddingTop="@dimen/marginM"
                 android:text="@string/Player2"
                 android:textAllCaps="true"
-                android:textColor="@color/mygrey"
                 android:textSize="@dimen/textSmall" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/imageButton"
+                android:layout_height="@dimen/imageButton"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginBottom="@dimen/marginM"
+                android:layout_marginTop="@dimen/marginL"
                 android:onClick="strikeFor2"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ball" />
 
             <TextView
                 android:id="@+id/player_2_score"
+                style="@style/TextMain"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="@dimen/marginM"
                 android:text="@string/zero"
-                android:textColor="@color/mygrey"
                 android:textSize="@dimen/textBig" />
 
             <Button
-                android:layout_width="125dp"
+                android:layout_width="@dimen/buttonW"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="addTo2"
                 android:text="@string/addtototal" />
 
             <Button
-                android:layout_width="125dp"
+                android:layout_width="@dimen/buttonW"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="reset2"
@@ -126,12 +118,10 @@
     </LinearLayout>
 
     <TextView
+        style="@style/TextMain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:text="@string/total"
         android:textAllCaps="true"
-        android:textColor="@color/mygrey"
         android:textSize="@dimen/textSmall" />
 
     <LinearLayout
@@ -165,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/marginM"
         android:onClick="resetAll"
         android:text="@string/resetgame" />
 

@@ -21,13 +21,13 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/player1"
+                android:id="@+id/playerOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
+                android:paddingTop="@dimen/marginS"
                 android:text="@string/Player1"
                 android:textAllCaps="true"
                 android:textColor="@color/mygrey"
@@ -35,12 +35,12 @@
 
             <ImageButton
                 android:id="@+id/ball"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_below="@id/player1"
+                android:layout_width="@dimen/imageButtonS"
+                android:layout_height="@dimen/imageButtonS"
+                android:layout_below="@id/playerOne"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/marginS"
                 android:onClick="strikeFor1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ball" />
@@ -53,30 +53,30 @@
                 android:layout_centerHorizontal="true"
                 android:text="@string/zero"
                 android:textColor="@color/mygrey"
-                android:textSize="50sp" />
+                android:textSize="@dimen/textLandM" />
 
             <Button
-                android:layout_width="110dp"
+                android:layout_width="@dimen/buttonLand"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/player_1_score"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="@dimen/marginM"
                 android:onClick="addTo1"
                 android:text="@string/addtototal"
-                android:textSize="12sp" />
+                android:textSize="@dimen/textLandS" />
 
 
             <Button
-                android:layout_width="110dp"
+                android:layout_width="@dimen/buttonLand"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/player_1_score"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="@dimen/marginM"
                 android:onClick="reset1"
                 android:text="@string/resethole"
-                android:textSize="12sp" />
+                android:textSize="@dimen/textLandS" />
 
         </RelativeLayout>
 
@@ -86,13 +86,13 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/player2"
+                android:id="@+id/playerTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
+                android:paddingTop="@dimen/marginS"
                 android:text="@string/Player2"
                 android:textAllCaps="true"
                 android:textColor="@color/mygrey"
@@ -100,12 +100,12 @@
 
             <ImageButton
                 android:id="@+id/ball2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_below="@id/player2"
+                android:layout_width="@dimen/imageButtonS"
+                android:layout_height="@dimen/imageButtonS"
+                android:layout_below="@id/playerTwo"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/marginS"
                 android:onClick="strikeFor2"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ball" />
@@ -118,30 +118,30 @@
                 android:layout_centerHorizontal="true"
                 android:text="@string/zero"
                 android:textColor="@color/mygrey"
-                android:textSize="50sp" />
+                android:textSize="@dimen/textLandM" />
 
             <Button
-                android:layout_width="110dp"
+                android:layout_width="@dimen/buttonLand"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/player_2_score"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="@dimen/marginM"
                 android:onClick="addTo2"
                 android:text="@string/addtototal"
-                android:textSize="12sp" />
+                android:textSize="@dimen/textLandS" />
 
 
             <Button
-                android:layout_width="110dp"
+                android:layout_width="@dimen/buttonLand"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/player_2_score"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="@dimen/marginM"
                 android:onClick="reset2"
                 android:text="@string/resethole"
-                android:textSize="12sp" />
+                android:textSize="@dimen/textLandS" />
 
         </RelativeLayout>
 
@@ -156,13 +156,13 @@
             android:id="@+id/player_1_total"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginS"
             android:layout_weight="1"
             android:gravity="end"
-            android:paddingRight="20dp"
+            android:paddingRight="@dimen/marginM"
             android:text="@string/zero"
             android:textColor="@color/mygrey"
-            android:textSize="20sp"
-            android:layout_marginBottom="10dp"/>
+            android:textSize="@dimen/textXS" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
             android:text="@string/total"
             android:textAllCaps="true"
             android:textColor="@color/mygrey"
-            android:textSize="20sp" />
+            android:textSize="@dimen/textXS" />
 
         <TextView
             android:id="@+id/player_2_total"
@@ -179,20 +179,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="start"
-            android:paddingLeft="20dp"
+            android:paddingLeft="@dimen/marginM"
             android:text="@string/zero"
             android:textColor="@color/mygrey"
-            android:textSize="20sp" />
+            android:textSize="@dimen/textXS" />
 
     </LinearLayout>
 
     <Button
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/buttonLand"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/marginS"
         android:onClick="resetAll"
         android:text="@string/resetgame"
-        android:textSize="12sp" />
+        android:textSize="@dimen/textLandS" />
 
 </LinearLayout>

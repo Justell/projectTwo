@@ -11,48 +11,34 @@
 
     <TextView
         android:id="@+id/welcome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:gravity="center_horizontal"
+        style="@style/TextStyle"
+        android:layout_marginBottom="@dimen/marginS"
+        android:layout_marginTop="@dimen/marginXXL"
         android:text="@string/welcome"
-        android:textColor="@color/mygrey"
-        android:textSize="30sp" />
+        android:textSize="@dimen/textM" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/enterNames"
+        style="@style/TextStyle"
         android:layout_below="@id/welcome"
-        android:gravity="center_horizontal"
         android:text="@string/enterNames"
-        android:textColor="@color/mygrey"
-        android:textSize="@dimen/textSmall" />
+        android:textSize="@dimen/textXS" />
 
     <EditText
         android:id="@+id/nameOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/play"
+        style="@style/EditStyle"
         android:layout_alignParentLeft="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:hint="@string/fillFirst"
-        android:textColor="@color/mygrey"
-        android:textSize="20sp" />
+        android:layout_below="@id/enterNames"
+        android:layout_marginLeft="@dimen/marginXL"
+        android:hint="@string/fillFirst" />
 
     <EditText
         android:id="@+id/nameTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/play"
+        style="@style/EditStyle"
         android:layout_alignParentRight="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="@string/fillSecond"
-        android:textColor="@color/mygrey"
-        android:textSize="20sp" />
+        android:layout_below="@id/enterNames"
+        android:layout_marginRight="@dimen/marginXL"
+        android:hint="@string/fillSecond" />
 
     <TextView
         android:id="@+id/play"
@@ -60,12 +46,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/marginS"
         android:background="@drawable/rectangle"
-        android:paddingBottom="10dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/marginS"
+        android:paddingLeft="@dimen/marginXL"
+        android:paddingRight="@dimen/marginXL"
+        android:paddingTop="@dimen/marginS"
         android:text="@string/play"
         android:textColor="@color/mygrey"
         android:textSize="@dimen/textSmall" />
